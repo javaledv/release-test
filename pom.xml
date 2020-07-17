@@ -55,6 +55,8 @@
                     <configuration>
                         <tag>v${releaseVersion}</tag>
                         <tagNameFormat>v@{project.version}</tagNameFormat>
+                        <preparationGoals>clean install</preparationGoals>
+                        <goals>clean</goals>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
                         <releaseProfiles>releases</releaseProfiles>
                     </configuration>
