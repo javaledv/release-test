@@ -18,7 +18,7 @@ devmentVersion=1.0.12-SNAPSHOT
 scmCommentPrefix='GST-1234: '
 
 # Start the release by creating a new release branch
-git checkout -b release/$releaseVersion dev
+git checkout -b release/$releaseVersion
 
 # The Maven release
 mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmCommentPrefix" -DreleaseVersion=$releaseVersion -DdevmentVersion=$devmentVersion
