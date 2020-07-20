@@ -11,9 +11,9 @@
 
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
 # The version to be released
-releaseVersion=1.0.11
+releaseVersion=4.0.3
 # The next devment version
-devmentVersion=1.0.12-SNAPSHOT
+devmentVersion=4.0.4-SNAPSHOT
 
 # Start the release by creating a new release branch
 git checkout release/release-$releaseVersion
