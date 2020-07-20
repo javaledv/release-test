@@ -5,7 +5,7 @@
     <groupId>org.example</groupId>
     <artifactId>release-test</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.0</version>
+    <version>4.0.1-SNAPSHOT</version>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -22,7 +22,7 @@
         <url>https://https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
 
-        <tag>v4.0.0</tag>
+        <tag></tag>
     </scm>
 
     <build>
