@@ -5,7 +5,7 @@
     <groupId>org.example</groupId>
     <artifactId>release-test</artifactId>
     <packaging>pom</packaging>
-    <version>4.0.2-SNAPSHOT</version>
+    <version>4.0.4</version>
 
     
     <properties>
@@ -22,7 +22,7 @@
     <scm>
         <url>https://https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
-        <tag>HEAD</tag>
+        <tag>v4.0.4</tag>
     </scm>
 
     <build>
@@ -53,7 +53,7 @@
                     <artifactId>maven-release-plugin</artifactId>
                     <version>2.5.3</version>
                     <configuration>
-                        <tagNameFormat>{project.version}</tagNameFormat>
+                        <tagNameFormat>v@{project.version}</tagNameFormat>
                         <preparationGoals>clean install</preparationGoals>
                         <goals>clean</goals>
                         <autoVersionSubmodules>true</autoVersionSubmodules>
