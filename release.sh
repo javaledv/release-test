@@ -14,11 +14,9 @@
 releaseVersion=1.0.11
 # The next devment version
 devmentVersion=1.0.12-SNAPSHOT
-# Provide an optional comment prefix, e.g. for your bug tracking system
-scmCommentPrefix='GST-1234: '
 
 # Start the release by creating a new release branch
-git checkout -b release/$releaseVersion
+git checkout release/release-$releaseVersion
 
 # The Maven release
 mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmCommentPrefix" -DreleaseVersion=$releaseVersion -DdevmentVersion=$devmentVersion
@@ -28,13 +26,13 @@ mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmComment
 git checkout dev
 
 # merge the version back into dev
-git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into dev" release/$releaseVersion
+git merge --no-ff -m "$scmCommentPrefix Merge release/release-$releaseVersion into dev" release/release-$releaseVersion
 # go to the master branch
 git checkout master
-# merge the version back into master but use the tagged version instead of the release/$releaseVersion HEAD
-git merge --no-ff -m "$scmCommentPrefix Merge previous version into master to avoid the increased version number" release/$releaseVersion~1
+# merge the version back into master but use the tagged version instead of the release/release-$releaseVersion HEAD
+git merge --no-ff -m "$scmCommentPrefix Merge previous version into master to avoid the increased version number" release/release-$releaseVersion~1
 # Removing the release branch
-git branch -D release/$releaseVersion
+git branch -D release/release-$releaseVersion
 # Get back on the dev branch
 git checkout dev
 # Finally push everything
