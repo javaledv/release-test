@@ -12,30 +12,30 @@
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
 # The version to be released
 releaseVersion=1.0.11
-# The next development version
-developmentVersion=1.0.12-SNAPSHOT
+# The next devment version
+devmentVersion=1.0.12-SNAPSHOT
 # Provide an optional comment prefix, e.g. for your bug tracking system
 scmCommentPrefix='GST-1234: '
 
 # Start the release by creating a new release branch
-git checkout -b release/$releaseVersion develop
+git checkout -b release/$releaseVersion dev
 
 # The Maven release
-mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmCommentPrefix" -DreleaseVersion=$releaseVersion -DdevelopmentVersion=$developmentVersion
+mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmCommentPrefix" -DreleaseVersion=$releaseVersion -DdevmentVersion=$devmentVersion
 
 # Clean up and finish
-# get back to the develop branch
-git checkout develop
+# get back to the dev branch
+git checkout dev
 
-# merge the version back into develop
-git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into develop" release/$releaseVersion
+# merge the version back into dev
+git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into dev" release/$releaseVersion
 # go to the master branch
 git checkout master
 # merge the version back into master but use the tagged version instead of the release/$releaseVersion HEAD
 git merge --no-ff -m "$scmCommentPrefix Merge previous version into master to avoid the increased version number" release/$releaseVersion~1
 # Removing the release branch
 git branch -D release/$releaseVersion
-# Get back on the develop branch
-git checkout develop
+# Get back on the dev branch
+git checkout dev
 # Finally push everything
 git push --all && git push --tags
