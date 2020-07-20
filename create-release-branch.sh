@@ -1,8 +1,8 @@
 #!/bin/bash
 
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
-releaseVersion=4.0.3
-devmentVersion=4.0.4-SNAPSHOT
+releaseVersion=4.0.4
+devmentVersion=4.0.5-SNAPSHOT
 
 git checkout dev
 

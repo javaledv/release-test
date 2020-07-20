@@ -10,10 +10,8 @@
 # Based on the excellent information found here: http://vincent.demeester.fr/2012/07/maven-release-gitflow/
 
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
-# The version to be released
-releaseVersion=1.0.11
-# The next devment version
-devmentVersion=1.0.12-SNAPSHOT
+releaseVersion=4.0.4
+devmentVersion=4.0.5-SNAPSHOT
 
 # Start the release by creating a new release branch
 git checkout release/release-$releaseVersion
