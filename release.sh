@@ -11,17 +11,15 @@
 
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
 # The version to be released
-releaseVersion=1.0.11
+releaseVersion=4.0.0
 # The next devment version
-devmentVersion=1.0.12-SNAPSHOT
-# Provide an optional comment prefix, e.g. for your bug tracking system
-scmCommentPrefix='GST-1234: '
+devmentVersion=4.0.1-SNAPSHOT
 
 # Start the release by creating a new release branch
 git checkout -b release/$releaseVersion dev
 
 # The Maven release
-mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmCommentPrefix" -DreleaseVersion=$releaseVersion -DdevmentVersion=$devmentVersion
+mvn --batch-mode release:prepare release:perform -DreleaseVersion=$releaseVersion -DdevmentVersion=$devmentVersion
 
 # Clean up and finish
 # get back to the dev branch
