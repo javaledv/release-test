@@ -15,7 +15,7 @@ releaseVersion=4.0.2
 # The next devment version
 devmentVersion=4.0.3-SNAPSHOT
 
-git checkout release/$releaseVersion
+git checkout release/release-$releaseVersion
 
 # The Maven release
 mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmCommentPrefix" -DreleaseVersion=$releaseVersion -DdevmentVersion=$devmentVersion
@@ -25,13 +25,13 @@ mvn --batch-mode release:prepare release:perform -DscmCommentPrefix="$scmComment
 git checkout dev
 
 # merge the version back into dev
-git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into dev" release/$releaseVersion
+git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into dev" release/release-$releaseVersion
 # go to the master branch
 git checkout master
 # merge the version back into master but use the tagged version instead of the release/$releaseVersion HEAD
-git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into master" release/$releaseVersion
+git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into master" release/release-$releaseVersion
 # Removing the release branch
-git branch -D release/$releaseVersion
+git branch -D release/release-$releaseVersion
 # Get back on the dev branch
 git checkout dev
 # Finally push everything
