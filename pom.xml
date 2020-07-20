@@ -22,7 +22,7 @@
         <url>https://https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
 
-        <tag></tag>
+        <tag />
     </scm>
 
     <build>
