@@ -21,7 +21,7 @@
     <scm>
         <url>https://https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
-        <tag>HEAD</tag>
+        <tag>release/release-4.0.3</tag>
     </scm>
 
     <build>
