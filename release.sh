@@ -11,11 +11,9 @@
 
 # CHANGE THESE BEFORE RUNNING THE SCRIPT!
 # The version to be released
-releaseVersion=1.0.11
+releaseVersion=4.0.1
 # The next devment version
-devmentVersion=1.0.12-SNAPSHOT
-# Provide an optional comment prefix, e.g. for your bug tracking system
-scmCommentPrefix='GST-1234: '
+devmentVersion=4.0.2-SNAPSHOT
 
 # Start the release by creating a new release branch
 git checkout -b release/$releaseVersion dev
@@ -32,7 +30,7 @@ git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into dev" 
 # go to the master branch
 git checkout master
 # merge the version back into master but use the tagged version instead of the release/$releaseVersion HEAD
-git merge --no-ff -m "$scmCommentPrefix Merge previous version into master to avoid the increased version number" release/$releaseVersion~1
+git merge --no-ff -m "$scmCommentPrefix Merge release/$releaseVersion into master" release/$releaseVersion
 # Removing the release branch
 git branch -D release/$releaseVersion
 # Get back on the dev branch
