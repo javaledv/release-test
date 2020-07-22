@@ -7,6 +7,7 @@
     <packaging>pom</packaging>
     <version>4.0.6-SNAPSHOT</version>
 
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
@@ -19,7 +20,7 @@
     </modules>
 
     <scm>
-        <url>https://https://github.com/javaledv/release-test</url>
+        <url>https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
         <tag>HEAD</tag>
     </scm>
@@ -33,15 +34,6 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.11.2</version>
-                <configuration>
-                    <username>javaledv</username>
-                    <password>C%Q3qeDF</password>
                 </configuration>
             </plugin>
         </plugins>
