@@ -19,6 +19,9 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <java.version>11</java.version>
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
+        <scm.url>https://github.com/javaledv/release-test</scm.url>
+        <scm.connection>scm:git:https://github.com/javaledv/release-test.git</scm.connection>
+        <scm.tag>release/release-6.0.5</scm.tag>
     </properties>
 
     <modules>
@@ -39,6 +42,7 @@
                 <artifactId>maven-scm-plugin</artifactId>
                 <version>1.11.2</version>
                 <configuration>
+
                     <connectionType>connection</connectionType>
                 </configuration>
             </plugin>
