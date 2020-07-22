@@ -20,7 +20,7 @@
     </modules>
 
     <scm>
-        <url>https://https://github.com/javaledv/release-test</url>
+        <url>https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
         <tag>release/release-4.0.5</tag>
     </scm>
@@ -34,15 +34,6 @@
                 <configuration>
                     <source>${java.version}</source>
                     <target>${java.version}</target>
-                </configuration>
-            </plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.11.2</version>
-                <configuration>
-                    <username>javaledv</username>
-                    <password>C%Q3qeDF</password>
                 </configuration>
             </plugin>
         </plugins>
