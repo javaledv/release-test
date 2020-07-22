@@ -29,7 +29,7 @@
     <scm>
         <url>https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
-        <tag>release/release-6.0.5</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
