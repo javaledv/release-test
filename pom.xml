@@ -21,7 +21,7 @@
         <maven-compiler-plugin.version>3.8.1</maven-compiler-plugin.version>
         <scm.url>https://github.com/javaledv/release-test</scm.url>
         <scm.connection>scm:git:https://github.com/javaledv/release-test.git</scm.connection>
-        <scm.tag>release/release-6.0.5</scm.tag>
+        <scm.tag>HEAD</scm.tag>
     </properties>
 
     <modules>
@@ -32,20 +32,11 @@
     <scm>
         <url>https://github.com/javaledv/release-test</url>
         <connection>scm:git:https://github.com/javaledv/release-test.git</connection>
-        <tag>release/release-6.0.5</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <build>
-        <plugins>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-scm-plugin</artifactId>
-                <version>1.11.2</version>
-                <configuration>
-
-                    <connectionType>connection</connectionType>
-                </configuration>
-            </plugin>
+        <plugins>   
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
